@@ -1,5 +1,8 @@
 # Import libraries and modules for data analysis
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Import models and utility functions from sklearn
 from sklearn.model_selection import train_test_split
@@ -34,3 +37,21 @@ model = LinearRegression()
 
 # Training the model
 model.fit( X_train, y_train )
+
+# Making predictions using the linear regression model
+y_pred_lr = model.predict( X_test )
+
+# Visualization: Actual vs Predicted Values
+plt.figure( figsize = ( 10, 6 ) )
+plt.scatter( y_test, y_pred_lr, alpha = 0.5 )
+plt.plot(
+  [y_test.min(), y_test.max()], 
+  [y_test.min(), y_test.max()],
+  'k--',
+  lw = 2, 
+)
+
+plt.xlabel( 'Actual' )
+plt.ylabel( 'Predicted' )
+plt.title( 'Actual vs Predicted Values' )
+plt.show()
