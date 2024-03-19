@@ -2,3 +2,6 @@ __pycache__
 .idea
 /venv/
 .vscode
+/NLP/003_NLP.with.Sequence.Models/data
+/NLP/003_NLP.with.Sequence.Models/data_2
+/NLP/003_NLP.with.Sequence.Models/*.zip
